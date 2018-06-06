@@ -1,0 +1,22 @@
+<html ng-app="events">
+<head>
+</head>
+<body>
+<h1>My age is {{ 10 + 34 }}</h1>
+<h2>My name is {{ "Kurt " + "Miller" }}</h2>
+
+<div ng-controller="eventController as events">
+	<h1>Event List</h1>
+	<div ng-repeat="event in events.event">
+		<h2>{{event.eventTitle}}</h2>
+		<p>{{event.eventDate | date}}</p>
+		<p>{{event.eventDateFormatted }}</p>
+		<p>{{event.eventShortDescription}}</p>
+		<button ng-show="{{event.imageThumb}}">Buy Now!</button>
+	</div>
+</div>
+
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

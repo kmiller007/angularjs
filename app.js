@@ -1,0 +1,65 @@
+(function() {
+	var app = angular.module("events",[]);
+
+	app.controller("eventController", function($scope, $http) {
+		$http.get('events.json')
+       .then(function(res){
+          $scope.events = res.data;                
+        });
+        //this.event = eventList;
+    });
+    
+	
+	var eventList = [
+		{
+        "eventId": "1",
+        "eventTitle": "Opening Night Gala with Patti LuPone",
+        "eventDate": "20150430",
+        "eventDateFormatted": "April 30th, 2015",
+        "eventShortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "eventLongDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ut pellentesque orci sed tortor blandit accumsan. Aenean lobortis et orci sit amet viverra. Morbi dignissim leo vitae dapibus condimentum. Etiam ut dui vitae neque tempor pharetra. Proin venenatis velit ut maximus interdum. Aliquam in scelerisque mi, ut porttitor arcu. Sed facilisis, diam vitae lacinia hendrerit, diam elit aliquam lacus, fermentum blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "onSaleResident": "20150329",
+        "onSalePublic": "20150411",
+        "imageThumb": "",
+        "imageLarge": ""
+    },
+    {
+        "eventId": "2",
+        "eventTitle": "Million Dollar Quartet",
+        "eventDate": "20150401",
+        "eventDateFormatted": "May 18th & 19th, 2015",
+        "eventShortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "eventLongDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ut pellentesque orci sed tortor blandit accumsan. Aenean lobortis et orci sit amet viverra. Morbi dignissim leo vitae dapibus condimentum. Etiam ut dui vitae neque tempor pharetra. Proin venenatis velit ut maximus interdum. Aliquam in scelerisque mi, ut porttitor arcu. Sed facilisis, diam vitae lacinia hendrerit, diam elit aliquam lacus, fermentum blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "onSaleResident": "20150329",
+        "onSalePublic": "20150411",
+        "imageThumb": "",
+        "imageLarge": ""
+    },
+    {
+        "eventId": "3",
+        "eventTitle": "The Temptations",
+        "eventDate": "20150520",
+        "eventDateFormatted": "May 20th, 2015",
+        "eventShortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "eventLongDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ut pellentesque orci sed tortor blandit accumsan. Aenean lobortis et orci sit amet viverra. Morbi dignissim leo vitae dapibus condimentum. Etiam ut dui vitae neque tempor pharetra. Proin venenatis velit ut maximus interdum. Aliquam in scelerisque mi, ut porttitor arcu. Sed facilisis, diam vitae lacinia hendrerit, diam elit aliquam lacus, fermentum blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "onSaleResident": "20150420",
+        "onSalePublic": "20150429",
+        "imageThumb": "",
+        "imageLarge": ""
+    },
+    {
+        "eventId": "4",
+        "eventTitle": "Chrystal Gayle",
+        "eventDate": "20150529",
+        "eventDateFormatted": "May 29th, 2015",
+        "eventShortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "eventLongDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ut pellentesque orci sed tortor blandit accumsan. Aenean lobortis et orci sit amet viverra. Morbi dignissim leo vitae dapibus condimentum. Etiam ut dui vitae neque tempor pharetra. Proin venenatis velit ut maximus interdum. Aliquam in scelerisque mi, ut porttitor arcu. Sed facilisis, diam vitae lacinia hendrerit, diam elit aliquam lacus, fermentum blandit sem turpis non ipsum. Donec pellentesque neque quis mauris bibendum, ut efficitur justo dignissim. Curabitur ac tellus nec mauris lacinia ullamcorper. Pellentesque viverra turpis in libero consectetur feugiat. Aliquam pharetra tristique vulputate. Nullam sed est congue, fringilla orci ac, ullamcorper quam.",
+        "onSaleResident": "20150329",
+        "onSalePublic": "20150411",
+        "imageThumb": "",
+        "imageLarge": ""
+    }
+	]
+
+})();
+
